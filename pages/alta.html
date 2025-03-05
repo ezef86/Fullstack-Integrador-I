@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alta de Producto</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/img/logo.jpg" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="alta.html">Alta</a></li>
+            </ul>
+            <form class="search-form">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <form id="alta-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" required>
+            
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" required>
+            
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" required>
+            
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" required>
+            
+            <label for="descripcion-corta">Descripción Corta:</label>
+            <textarea id="descripcion-corta" name="descripcion-corta" required></textarea>
+            
+            <label for="descripcion-larga">Descripción Larga:</label>
+            <textarea id="descripcion-larga" name="descripcion-larga" required></textarea>
+            
+            <label for="envio">Envío sin cargo:</label>
+            <input type="checkbox" id="envio" name="envio">
+            
+            <label for="edad-desde">Edad Desde:</label>
+            <input type="number" id="edad-desde" name="edad-desde" required>
+            
+            <label for="edad-hasta">Edad Hasta:</label>
+            <input type="number" id="edad-hasta" name="edad-hasta" required>
+            
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+            
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Mi Tienda. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../assets/js/formularios.js"></script>
 </body>
 </html>

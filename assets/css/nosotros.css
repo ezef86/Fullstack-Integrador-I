@@ -1,0 +1,18 @@
+.about-us {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.about-us h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-us p {
+    font-size: 1rem;
+    color: #555;
+}

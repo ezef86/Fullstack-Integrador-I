@@ -1,0 +1,39 @@
+form {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 0.625rem;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d81b60;
+}
