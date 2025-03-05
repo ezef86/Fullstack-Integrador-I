@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +10,18 @@
 body {
     font-family: 'Arial', sans-serif;
     font-size: 100%;
+    padding-top: 4rem; 
 }
 
 header {
     background-color: #333;
     color: white;
     padding: 0.625rem 0;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav {
@@ -22,6 +31,23 @@ nav {
     max-width: 75rem;
     margin: 0 auto;
     padding: 0 1.25rem;
+    height: 100%;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-family: "Sigmar", sans-serif;
+    color: rgb(246, 128, 11);
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2e2aa1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-style: double;
+    border-bottom-width: 0.3rem;
+    border-top-style: double;
+    border-top-width: 0.3rem;
 }
 
 nav .logo img {
@@ -42,18 +68,100 @@ nav ul li a {
 nav .search-form {
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 nav .search-form input {
-    padding: 0.3125rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border: none;
+    flex-grow: 1;
+    border-right: 1px solid #ddd;
 }
 
 nav .search-form button {
-    background-color: #555;
+    background-color: #e91e63;
     color: white;
     border: none;
-    padding: 0.3125rem 0.625rem;
+    padding: 0.5rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    width: 2.5rem;
+}
+
+nav .search-form button:hover {
+    background-color: #d81b60;
+}
+
+nav .search-form button i {
+    margin: 0;
+    font-size: 1rem; 
+}
+
+.burger-icon {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-icon i {
+    font-size: 1.5rem;
+}
+
+.header-hidden {
+    display: none;
+}
+
+.header-visible {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Make the vertical header smaller in width */
+    height: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.header-visible nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-visible nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .burger-icon {
+        display: block;
+    }
+
+    header {
+        display: none;
+    }
+
+    header.header-visible {
+        display: flex;
+    }
 }
 
 footer {

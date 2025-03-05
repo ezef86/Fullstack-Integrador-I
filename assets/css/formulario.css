@@ -1,5 +1,5 @@
 form {
-    max-width: 90%;
+    max-width: 70%;
     margin: 2rem auto;
     padding: 2rem;
     border: 1px solid #ddd;
@@ -36,4 +36,45 @@ form button {
 
 form button:hover {
     background-color: #d81b60;
+}
+
+/* Ensure no conflicting styles for .search-form */
+nav .search-form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+nav .search-form input {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border: none;
+    flex-grow: 1;
+    border-right: 1px solid #ddd;
+}
+
+nav .search-form button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    width: 2.5rem; /* Ensure consistent width */
+}
+
+nav .search-form button:hover {
+    background-color: #d81b60;
+}
+
+nav .search-form button i {
+    margin: 0;
+    font-size: 1rem; /* Ensure consistent icon size */
 }
