@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../assets/img/logo.jpg" alt="Logo">
+                <a href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo"></a>
             </div>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -26,22 +26,45 @@
             </form>
         </nav>
     </header>
+    <div class="titulo-form">
+        <h1>Alta de Producto</h1>
+        <p>Ingrese las características del vehículo. Los datos mínimos son: </p>
+            <ul>
+                <li>Nombre del dueño</li>
+                <li>Precio de alquiler por día</li>
+                <li>Cantidad de autos en stock</li>
+                <li>Marca y modelo,</li>
+                <li>Fotos del vehículo</li>
+            </ul>
+    </div>
     <main>
-        <form id="alta-form">
+        <form action="submit.js" method="post" id="alta-form">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
+            <input type="text" minlength="2" maxlength="50" placeholder="Mínimo 2 caracteres máximo 50" id="nombre" name="nombre" required>
             <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" required>
+            <input type="number" min="0" max="120000000" placeholder="Entre 0 y 120 millones" id="precio" name="precio" required>
             
             <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock" required>
-            
-            <label for="marca">Marca:</label>
+            <input type="number" min="0" max="50" placeholder="Entre 0 y 50" id="stock" name="stock" required>
+            <label for="marca">Marca y modelo:</label>
             <input type="text" id="marca" name="marca" required>
             
-            <label for="categoria">Categoría:</label>
-            <input type="text" id="categoria" name="categoria" required>
+            <div class="envio-container">
+                <div class="envio-item">
+                    <label for="envio">Envío sin cargo:</label>
+                    <input type="checkbox" id="envio" name="envio">
+                </div>
+                <div class="envio-item">
+                    <label for="categoria">Categoría:</label>
+                    <select name="categoria" id="categoria" required>
+                        <option value="0">Seleccione categoría</option>
+                        <option value="1">Gama Baja</option>
+                        <option value="2">Gama Media</option>
+                        <option value="3">Gama Alta</option>
+                        <option value="4">Gama Deluxe</option>
+                    </select>
+                </div>
+            </div>
             
             <label for="descripcion-corta">Descripción Corta:</label>
             <textarea id="descripcion-corta" name="descripcion-corta" required></textarea>
@@ -49,14 +72,16 @@
             <label for="descripcion-larga">Descripción Larga:</label>
             <textarea id="descripcion-larga" name="descripcion-larga" required></textarea>
             
-            <label for="envio">Envío sin cargo:</label>
-            <input type="checkbox" id="envio" name="envio">
-            
-            <label for="edad-desde">Edad Desde:</label>
-            <input type="number" id="edad-desde" name="edad-desde" required>
-            
-            <label for="edad-hasta">Edad Hasta:</label>
-            <input type="number" id="edad-hasta" name="edad-hasta" required>
+            <div class="edad-container">
+                <div>
+                    <label for="edad-desde">Edad Desde:</label>
+                    <input type="number" min="0" max="120" placeholder="Entre 0 y 120" id="edad-desde" name="edad-desde">
+                </div>
+                <div>
+                    <label for="edad-hasta">Edad Hasta:</label>
+                    <input type="number" min="0" max="120" placeholder="Entre 0 y 120" id="edad-hasta" name="edad-hasta">
+                </div>
+            </div>
             
             <label for="foto">Foto:</label>
             <input type="file" id="foto" name="foto" accept="image/*" required>

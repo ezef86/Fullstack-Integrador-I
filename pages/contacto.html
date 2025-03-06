@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../assets/img/logo.jpg" alt="Logo">
+                <a href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo"></a>
             </div>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -26,17 +26,20 @@
             </form>
         </nav>
     </header>
+    <div class="titulo-form">
+        <h1>Formulario de Contacto</h1>
+        <p>Si quiere comunicarse con nosotros, ingrese sus datos personales y nos pondremos en contacto a la brevedad </p>
+    </div>
     <main>
-        <form id="contacto-form">
+        <form action="submit.js" method="post" id="contacto-form">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
+            <input type="text" minlength="2" maxlength="50" id="nombre" name="nombre" placeholder="Ingrese nombre..." required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
+            <input type="email" id="email" name="email" placeholder="user@example.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Por favor, ingrese un email válido" required>
             <label for="comentarios">Comentarios:</label>
-            <textarea id="comentarios" name="comentarios" required></textarea>
-            
+            <textarea id="comentarios" name="comentarios" placeholder="Ingrese su consulta..." required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </main>

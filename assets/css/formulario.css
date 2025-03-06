@@ -1,3 +1,22 @@
+.titulo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-form h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titulo-form p {
+    font-size: 1.2rem;
+    color: #201e1e;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 form {
     max-width: 70%;
     margin: 2rem auto;
@@ -38,43 +57,32 @@ form button:hover {
     background-color: #d81b60;
 }
 
-/* Ensure no conflicting styles for .search-form */
-nav .search-form {
+.edad-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.edad-container div {
+    flex: 1;
+}
+
+.envio-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #ddd;
+    gap: 1rem;
+}
+
+.envio-item {
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-
-nav .search-form input {
-    padding: 0.5rem 1rem;
-    margin: 0;
-    border: none;
-    flex-grow: 1;
-    border-right: 1px solid #ddd;
-}
-
-nav .search-form button {
-    background-color: #e91e63;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-    width: 2.5rem; /* Ensure consistent width */
-}
-
-nav .search-form button:hover {
-    background-color: #d81b60;
-}
-
-nav .search-form button i {
-    margin: 0;
-    font-size: 1rem; /* Ensure consistent icon size */
+    gap: 0.5rem;
+    white-space: nowrap; /* Ensure text and checkbox stay on the same line */
 }
