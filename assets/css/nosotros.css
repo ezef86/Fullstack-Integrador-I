@@ -1,10 +1,16 @@
 .about-us {
-    max-width: 90%;
+    max-width: 70%;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
     border: 1px solid #ddd;
     border-radius: 0.5rem;
+}
+
+body {
+    background-image: url("../img/amigos.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .about-us h1 {
@@ -13,6 +19,6 @@
 }
 
 .about-us p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 1.2rem;
+    color: #201e1e;
 }
